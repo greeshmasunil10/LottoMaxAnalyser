@@ -1,0 +1,2 @@
+# LottoMaxPredictor
+Lotto Max Predictor 
