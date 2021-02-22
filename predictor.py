@@ -68,12 +68,15 @@ sums.reverse()
 
 import numpy as np
 import matplotlib.pyplot as plt
-plt.figure(figsize = (len(draw_dict.keys())*3/4, 10)) 
+plt.figure(figsize = (len(draw_dict.keys()), 10)) 
 plt.title("Lotto Max Draws in "+str(start)) 
 dates=list(draw_dict.keys())
 x = [get_timestamp(x) for x in dates]
 y=list(draw_dict.values())
 plt.xticks(rotation=90)
+sx=range(1,51)
+plt.yticks(np.arange(min(sx), max(sx)+1, 1.0))
+#plt.yticks(np.arange(min(y), max(y)+1, 1.0))
 #plt.plot(draw_dates,winning_numbers,marker='o',markerfacecolor="black")
 for i in range(7):
     for x1,y1 in zip(x,y):
@@ -96,6 +99,7 @@ plt.figure(figsize = (len(draw_dates)/2, 10))
 plt.grid(color='#95a5a6', linestyle='--', linewidth=2, axis='y', alpha=0.7)
 plt.grid(color='#95a5a6', linestyle='--', linewidth=2, axis='x', alpha=0.7)
 plt.xticks(rotation=90)
+plt.yticks(np.arange(len(y)))
 plt.title("Lotto Max Draw Sums in "+str(start)) 
 for x,y in zip(draw_dates,sums):
 
