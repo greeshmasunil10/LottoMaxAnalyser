@@ -1,2 +1,1 @@
-# LottoMaxPredictor
-Lotto Max Predictor 
+# LottoMaxAnalyser
